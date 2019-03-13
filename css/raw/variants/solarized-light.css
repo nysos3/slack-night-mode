@@ -2705,6 +2705,8 @@ a.c-member_slug--mention, a.c-member_slug--mention:hover { background-color: #b5
 
 .c-dialog__body .p-share_dialog_message_input.focus { border-color: #fef9ed; box-shadow: unset; }
 
+.c-dialog__body .p-share_dialog__section:last-child { background-color: #fcf3d9; border-color: #fbeecb; }
+
 .c-dialog__body .p-file_upload_dialog__preview, .c-dialog__body .p-file_upload_dialog__preview_image { background-color: #fbeecb; border-color: #fcf3d9; }
 
 .c-dialog__body input.c-input_text { border-color: #fcf3d9; }
