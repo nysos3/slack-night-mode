@@ -46,13 +46,13 @@
   }
 }
 
-#monkey_scroll_wrapper_for_channels_scroller {
-  .monkey_scroll_bar {
+.c-scrollbar--monkey .c-scrollbar {
+  &__track {
     background: $color-shade-mid;
   }
 
-  .monkey_scroll_handle_inner {
+  &__bar {
     background: $color-shade-light;
-    border: 3px solid $color-base;
+    box-shadow: 0 3px 0 $color-base, 0 -3px 0 $color-base;
   }
 }

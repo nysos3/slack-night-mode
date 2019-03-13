@@ -7,6 +7,7 @@
 
   .heading {
     background: darken($color-base, 5%);
+    border-bottom-color: $color-shade-dark;
     color: $base-link-color;
 
     a {
@@ -40,7 +41,11 @@
     }
   }
 
-  .subheading {
+  .heading_text {
+    color: $base-link-color;
+  }
+
+  .subheading:not(.empty) {
     background: $color-base;
     border-top: 1px solid $color-shade-darkest;
     color: $color-highlight;
@@ -60,6 +65,7 @@
 
   .flexpane_tab_bar {
     li {
+      .tab,
       a {
         color: $base-link-color;
       }
@@ -67,7 +73,8 @@
       &:hover {
         border-bottom: 4px solid $color-shade-dark;
 
-        a {
+        a,
+        .tab {
           color: $base-link-color;
         }
       }
@@ -75,7 +82,8 @@
       &.active {
         border-bottom: 4px solid $color-shade-dark;
 
-        a {
+        a,
+        .tab {
           color: $base-link-color;
         }
       }
@@ -92,29 +100,17 @@
   }
 }
 
-.flexpane_redesign {
-  #flex_contents {
-    .heading {
-      border-bottom: 0.0625rem solid $color-shade-dark;
-    }
+.close_flexpane {
+  color: $color-highlight;
 
-    .heading_text {
-      color: $base-link-color;
-    }
-  }
-
-  .close_flexpane {
-    color: $color-highlight;
-
-    &:focus,
-    &:hover {
-      color: $base-font-color;
-    }
+  &:focus,
+  &:hover {
+    color: $base-font-color;
   }
 }
 
-.flexbox_client.flexpane_redesign.flex_pane_showing #col_flex {
-  border-left: 1px solid $color-shade-dark;
+#client-ui.flex_pane_showing #col_flex {
+  border-left-color: $color-shade-dark;
 }
 
 .toolbar_container {
@@ -125,4 +121,20 @@
 
 .msg_right_link {
   color: $base-link-color;
+}
+
+.message_location_label {
+  color: $color-highlight;
+}
+
+.p-flexpane {
+  &_header {
+    background: $color-shade-dark;
+    border-color: $color-shade-light;
+    color: $base-font-color;
+  }
+}
+
+#client_body:not(.onboarding):not(.feature_global_nav_layout):before {
+  background: $color-shade-dark;
 }

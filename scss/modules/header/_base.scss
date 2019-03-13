@@ -1,5 +1,6 @@
 .channel_header {
   background: $color-base;
+  box-shadow: inset 1px 0 0 0 $color-base;
 
   .blue_on_hover:hover {
     color: $base-font-color;
@@ -9,6 +10,13 @@
 #client_body:not(.onboarding)::before {
   background: $color-base;
   border-bottom: 1px solid $color-shade-dark;
+  box-shadow: inset 1px 0 0 0 $color-base;
+}
+
+#client_body:not(.onboarding):not(.feature_global_nav_layout)::before {
+  background: $color-base;
+  border-bottom: 1px solid $color-shade-dark;
+  box-shadow: inset 1px 0 0 0 $color-base;
 }
 
 .messages_header {
@@ -46,28 +54,8 @@
   color: $color-highlight;
 }
 
-.channel_header_info {
-  .star,
-  button {
-    color: $base-link-color;
-  }
-}
-
-.channel_title_info {
-  background: $color-base;
-  color: $color-highlight;
-
-  .divider_bar {
-    background: $color-shade-dark;
-  }
-
-  .channel_details_toggle {
-    color: $color-highlight;
-  }
-
-  .channel_actions_toggle {
-    color: $color-highlight;
-  }
+.channel_header_info button {
+  color: $base-link-color;
 }
 
 .channel_header_icon {
@@ -110,11 +98,14 @@
   }
 }
 
+#canvases_toggle,
 #details_toggle,
 #recent_mentions_toggle,
+#sli_recap_toggle,
 #stars_toggle {
   &.active {
     background: $color-shade-dark;
+    color: $base-font-color;
 
     &:hover {
       background: $color-shade-light;
@@ -134,4 +125,13 @@
 
 .presence {
   color: $color-highlight;
+}
+
+#edit_topic_inner:not(.unable_to_post)::before {
+  background: $color-base;
+  border-color: $color-shade-dark;
+}
+
+#edit_topic_trigger {
+  color: $base-link-color;
 }

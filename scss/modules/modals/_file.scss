@@ -30,7 +30,8 @@
     }
   }
 
-  .file_size {
+  .file_size,
+  .muted_tooltip_info {
     color: $color-highlight;
   }
 
@@ -89,5 +90,16 @@
 
   #file_comment {
     color: $base-font-color;
+  }
+}
+
+#file_comment_textarea.texty_comment_input {
+  background: $color-base;
+  border-color: $color-shade-dark;
+  color: $base-font-color;
+
+  &.focus,
+  &:hover {
+    border-color: $color-shade-dark;
   }
 }

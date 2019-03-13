@@ -1,4 +1,4 @@
-.lazy_filter_select.default_style {
+.lazy_filter_select {
   &.disabled {
     background: $color-shade-dark;
 
@@ -8,7 +8,8 @@
   }
 
   .lfs_input_container {
-    border: 1px solid $color-shade-darkest;
+    background-color: $color-shade-light;
+    border-color: $color-shade-darkest;
 
     &.active,
     &:hover {
@@ -22,17 +23,25 @@
 
   .lfs_list_container {
     background: $color-base;
-    border: 1px solid $color-shade-darkest;
+    border-color: $color-shade-darkest;
     box-shadow: 0 0 3px $color-shadow-dark;
   }
 
   .lfs_list .lfs_item {
     &.selected {
       color: $base-font-color;
+
+      .c-member__current-status .prevent_copy_paste,
+      .c-member__current-status--small::before,
+      .c-member__display-name,
+      .c-member__name,
+      .c-member__secondary-name {
+        color: $base-font-color !important;
+      }
     }
 
     &.disabled {
-      color: $base-font-color;
+      color: $color-highlight;
     }
 
     &.active {
@@ -56,6 +65,24 @@
     &.active::after,
     &:hover::after {
       color: $base-font-color;
+    }
+  }
+}
+
+#select_share_channels .lazy_filter_select {
+  .lfs_value .lfs_item.selected {
+    color: $base-font-color !important;
+
+    .ts_icon:not(.presence_icon) {
+      color: $color-highlight !important;
+    }
+  }
+
+  .lfs_item {
+    color: $color-highlight !important;
+
+    .ts_icon:not(.presence_icon) {
+      color: $color-highlight !important;
     }
   }
 }

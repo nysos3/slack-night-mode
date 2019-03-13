@@ -1,6 +1,19 @@
 #autocomplete_menu {
   color: $base-font-color;
 
+  header {
+    background-color: $color-base;
+
+    .header_label {
+      color: $color-highlight;
+    }
+
+    hr {
+      border-bottom-color: transparent;
+      border-top-color: $color-shade-darkest;
+    }
+  }
+
   h2 {
     color: $base-font-color;
   }
@@ -19,18 +32,12 @@
     box-shadow: 0 1px 0 0 $color-shadow-light;
   }
 
-  .section_header {
-    .header_label {
-      background-color: $color-base;
-      color: $color-highlight;
-    }
-  }
-
   .pickmeup {
     border-bottom: 1px solid $color-shade-dark;
   }
 
-  &.search_menu {
+  &.search_menu,
+  &.search_menu.unified {
     .section_header::before {
       background-color: $color-shade-light;
     }
@@ -80,9 +87,12 @@
       }
     }
 
-    &:not(.keyboard_active) li {
+    &:not(.keyboard_active) li,
+    .results.unified:not(.keyboard_active) li {
       &:focus,
       &:hover {
+        background: transparent;
+
         .muted_text {
           color: $color-highlight;
         }
@@ -124,12 +134,26 @@
       color: $base-font-color;
     }
 
+    .results.unified {
+      .unified_autocomplete_item {
+        .text {
+          color: $base-font-color;
+        }
+
+        .token {
+          background-color: $color-shade-mid;
+          color: $base-font-color;
+        }
+      }
+    }
+
     .action_btn,
     .modifier_icon {
       color: $color-highlight;
     }
 
-    footer {
+    footer,
+    footer.unified {
       .keyword::before,
       .modifier::before {
         background: $color-shade-lightest;

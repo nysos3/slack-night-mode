@@ -28,7 +28,7 @@
     color: $base-font-color;
 
     ts-icon.ts_icon_question_circle {
-      color: $color-highlight;
+      color: $color-highlight !important;
     }
   }
 
@@ -51,5 +51,23 @@
 
   ts-conversation ts-message.selected .message_content .thread_channel_link {
     color: $base-link-color;
+  }
+}
+
+#convo_tab .message_input,
+#convo_tab textarea#msg_text {
+  color: $base-font-color;
+}
+
+ts-message.message:hover,
+ts-message.message:active,
+ts-message.active:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator), ts-message.message--focus:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator), ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator) {
+  background-color: $color-shade-darker;
+}
+
+ts-thread {
+  .collapse_inline_thread_container:hover,
+  .view_all_replies_container:hover {
+    background-color: $color-shade-darker;
   }
 }

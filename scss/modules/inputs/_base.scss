@@ -9,12 +9,12 @@ input {
   &[type=week],
   &[type=number],
   &[type=email],
-  &[type=url],
+  &[type='url'], // libsass#2429
   &[type=tel],
   &[type=color],
   &[type=search] {
     background-color: $color-shade-light;
-    border: 1px solid $color-shade-darkest;
+    border-color: $color-shade-darkest;
     color: $base-font-color;
 
     &:focus {
@@ -220,6 +220,13 @@ textarea {
   }
 }
 
+.btn_basic {
+  &:focus,
+  &:hover {
+    color: $base-font-color;
+  }
+}
+
 .btn_outline {
   background: $color-base;
   color: $base-link-color !important;
@@ -315,4 +322,29 @@ textarea {
 
 .input_note {
   color: $base-font-color;
+}
+
+.c-enhanced_text_input {
+  background-color: $color-shade-light;
+  border-color: $color-shade-dark;
+  color: $color-highlight;
+
+  &:hover,
+  &.c-enhanced_text_input--active {
+    border-color: $color-shade-light;
+  }
+}
+
+.c-filter_input {
+  background: $color-shade-light;
+}
+
+.p-share_dialog_message_input {
+  color: $base-font-color;
+}
+
+.c-texty_input {
+  .ql-placeholder {
+    color: $base-font-color;
+  }
 }
