@@ -2069,7 +2069,9 @@ html.no_touch a.filetype_button_web:hover .file_title { color: #d3dae3; }
 
 .c-pillow_file_container .c-pillow_file__swap .c-pillow_file__slide { background-color: #1d2027; }
 
-.c-pillow_file__description, .c-pillow_file__title { color: #d3dae3; }
+.c-pillow_file__snippet__truncated, .c-pillow_file__description, .c-pillow_file__title { color: #d3dae3; }
+
+.c-pillow_file__content--collapsed::after { background: linear-gradient(0deg, #858991, rgba(255, 255, 255, 0) 40px); }
 
 .p-file_list, .p-file_list__filters { background: #2a2f39; }
 
