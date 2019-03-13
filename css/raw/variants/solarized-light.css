@@ -1199,6 +1199,8 @@ ts-mention { background: rgba(255, 254, 251, 0.1) !important; color: #586e75 !im
 
 .c-message_attachment__author_link + .c-message_attachment__author_link { color: #268bd2; }
 
+.c-message_attachment__author_name { color: #268bd2; }
+
 .c-message_attachment__title_link span { color: #586e75; }
 
 .c-message_attachment__text_expander { color: #268bd2; }
